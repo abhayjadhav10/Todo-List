@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main Container */
+
+.main {
+  width: 450px;
+
+  padding: 35px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Heading */
+
+.todoHeading {
+  text-align: center;
+
+  color: white;
+
+  font-size: 38px;
+
+  font-weight: 600;
+
+  margin-bottom: 35px;
+
+  letter-spacing: 1px;
+}
+
+/* Input + Button Section */
+
+.inputSearch {
+  display: flex;
+
+  gap: 12px;
+}
+
+/* Input */
+
+.inputSearch input {
+  flex: 1;
+
+  padding: 15px 18px;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  font-size: 16px;
+
+  transition: 0.25s;
+}
+
+.inputSearch input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.inputSearch input:focus {
+  background: rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35);
+}
+
+/* Button */
+
+.inputSearch button {
+  padding: 15px 22px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+/* Button Hover */
+
+.inputSearch button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
