@@ -1,30 +1,41 @@
 /* Add Task */
 
-let addTaskBtn = document.querySelector(".addTaskBtn")
+let addTaskBtn = document.querySelector(".addTaskBtn");
 let addTaskInput = document.querySelector(".addTaskInput");
 
 addTaskBtn.addEventListener("click", function () {
-    let inputValue = addTaskInput.value
+  let inputValue = addTaskInput.value;
 
-    let taskHTML = `
+  let taskHTML = `
             <li class="taskItem">
                 ${inputValue}
                 <button class="deleteBtn">Delete</button>
               </li>
-    `
-    if (inputValue === "") {
-        alert('Enter a value')
-    } else {
-        document.querySelector('.taskList').innerHTML += taskHTML
-    }
-})
+    `;
+  if (inputValue === "") {
+    alert("Enter a value");
+  } else {
+    document.querySelector(".taskList").innerHTML += taskHTML;
+  }
+});
 
 /* Delete task */
 
-document.querySelector(".taskList").addEventListener("click", function(e){
-    if (e.target.classList.contains("deleteBtn")) {
-        e.target.parentElement.remove();
-    }
-})
+document.querySelector(".taskList").addEventListener("click", function (e) {
+  if (e.target.classList.contains("deleteBtn")) {
+    e.target.parentElement.remove();
+  }
+});
 
-/* Erase task */
+/* Task completed */
+
+document.querySelector(".taskList").addEventListener("click", function (e) {
+  if (e.target.classList.contains("deleteBtn")) {
+    return;
+  } else if (e.target.classList.contains("taskItem")) {
+    e.target.classList.toggle("completed");
+  }
+});
+
+
+// localStorage.setItem("name", "Abhiii");
