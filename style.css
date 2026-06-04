@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body{
+
   min-height: 100vh;
 
   display: flex;
@@ -14,32 +15,52 @@ body {
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background:
+    linear-gradient(
+      135deg,
+      #111844,
+      #1b2458
+    );
 
   font-family: "Poppins", sans-serif;
 }
 
-/* Main Container */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
-.main {
+.main{
+
   width: 450px;
 
   padding: 35px;
 
   border-radius: 24px;
 
-  background: rgba(255, 255, 255, 0.08);
+  background:
+    rgba(255,255,255,0.08);
 
-  backdrop-filter: blur(12px);
+  backdrop-filter:
+    blur(12px);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border:
+    1px solid rgba(255,255,255,0.08);
 
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.35);
 }
 
-/* Heading */
+/* =========================
+   HEADER
+========================= */
 
-.todoHeading {
+.header{
+
+  margin-bottom: 30px;
+}
+
+.todoHeading{
+
   text-align: center;
 
   color: white;
@@ -48,14 +69,20 @@ body {
 
   font-weight: 600;
 
-  margin-bottom: 35px;
-
   letter-spacing: 1px;
 }
 
-/* Input + Button Section */
+/* =========================
+   INPUT SECTION
+========================= */
 
-.inputSearch {
+.middle{
+
+  margin-bottom: 30px;
+}
+
+.inputSearch{
+
   display: flex;
 
   gap: 12px;
@@ -63,10 +90,12 @@ body {
 
 /* Input */
 
-.inputSearch input {
+.inputSearch input{
+
   flex: 1;
 
-  padding: 15px 18px;
+  padding:
+    15px 18px;
 
   border: none;
 
@@ -74,7 +103,8 @@ body {
 
   border-radius: 14px;
 
-  background: rgba(255, 255, 255, 0.08);
+  background:
+    rgba(255,255,255,0.08);
 
   color: white;
 
@@ -83,26 +113,38 @@ body {
   transition: 0.25s;
 }
 
-.inputSearch input::placeholder {
-  color: rgba(255, 255, 255, 0.55);
+.inputSearch input::placeholder{
+
+  color:
+    rgba(255,255,255,0.55);
 }
 
-.inputSearch input:focus {
-  background: rgba(255, 255, 255, 0.12);
+.inputSearch input:focus{
 
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35);
+  background:
+    rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 0 0 3px rgba(99,102,241,0.35);
 }
 
 /* Button */
 
-.inputSearch button {
-  padding: 15px 22px;
+.inputSearch button{
+
+  padding:
+    15px 22px;
 
   border: none;
 
   border-radius: 14px;
 
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
 
   color: white;
 
@@ -115,10 +157,101 @@ body {
   transition: 0.25s;
 }
 
-/* Button Hover */
+.inputSearch button:hover{
 
-.inputSearch button:hover {
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+  box-shadow:
+    0 8px 20px rgba(99,102,241,0.35);
+}
+
+/* =========================
+   TASK LIST
+========================= */
+
+.taskList{
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+/* Task Item */
+
+.taskItem{
+
+  list-style: none;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding:
+    16px 18px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  transition: 0.25s;
+}
+
+/* Hover */
+
+.taskItem:hover{
+
+  transform:
+    translateY(-2px);
+
+  background:
+    rgba(255,255,255,0.09);
+}
+
+/* Delete Button */
+
+.taskItem button{
+
+  border: none;
+
+  padding:
+    10px 16px;
+
+  border-radius: 10px;
+
+  background:
+    rgba(239,68,68,0.15);
+
+  color:
+    #ff6b6b;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+/* Delete Hover */
+
+.taskItem button:hover{
+
+  background:
+    rgba(239,68,68,0.25);
+
+  transform:
+    scale(1.05);
 }
