@@ -1,3 +1,5 @@
+/* Add Task */
+
 let addTaskBtn = document.querySelector(".addTaskBtn")
 let addTaskInput = document.querySelector(".addTaskInput");
 
@@ -7,7 +9,7 @@ addTaskBtn.addEventListener("click", function () {
     let taskHTML = `
             <li class="taskItem">
                 ${inputValue}
-                <button>Delete</button>
+                <button class="deleteBtn">Delete</button>
               </li>
     `
     if (inputValue === "") {
@@ -16,3 +18,13 @@ addTaskBtn.addEventListener("click", function () {
         document.querySelector('.taskList').innerHTML += taskHTML
     }
 })
+
+/* Delete task */
+
+document.querySelector(".taskList").addEventListener("click", function(e){
+    if (e.target.classList.contains("deleteBtn")) {
+        e.target.parentElement.remove();
+    }
+})
+
+/* Erase task */
