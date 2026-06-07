@@ -37,5 +37,3 @@ document.querySelector(".taskList").addEventListener("click", function (e) {
   }
 });
 
-
-// localStorage.setItem("name", "Abhiii");

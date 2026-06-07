@@ -143,6 +143,8 @@ body {
   flex-direction: column;
 
   gap: 15px;
+
+  list-style: none;
 }
 
 /* Task Item */
